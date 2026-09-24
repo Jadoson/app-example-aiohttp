@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post" action="/notes">
+  <input name="text" maxlength="500" placeholder="Новая заметка" required>
+  <button type="submit">Добавить</button>
+</form>
+<ul>
+  {% for note in notes %}
+  <li><span>{{ note.text }}</span> <time>{{ note.created_at }}</time></li>
+  {% else %}
+  <li>Заметок пока нет</li>
+  {% endfor %}
+</ul>
+{% endblock %}
