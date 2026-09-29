@@ -14,7 +14,7 @@ TEMPLATES_DIR = Path(__file__).parent / "templates"
 
 
 async def seed_notes(app):
-    app["storage"].add("Первая заметка — приложение работает")
+    app["storage"].add("test")
 
 
 def create_app():
